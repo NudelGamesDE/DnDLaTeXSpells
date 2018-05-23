@@ -51,7 +51,8 @@ namespace SpellDatabase
                     case ESpellLevel.Level3: postfix = "rd"; break;
                 }
 
-                formatParams.Add($"{(int)level}{postfix}-level {Type.ToString().ToLower()}");
+                var ritualString = Ritual ? "(ritual)" : "";
+                formatParams.Add($"{(int)level}{postfix}-level {Type.ToString().ToLower()} {ritualString}");
             }
 
             formatParams.Add(CastingTime ?? "");
@@ -68,7 +69,8 @@ namespace SpellDatabase
             if (!string.IsNullOrWhiteSpace(material)) components.Add($"M ({material})");
             formatParams.Add(string.Join(", ", components.Cast<object>().ToArray()));
 
-            formatParams.Add(Duration ?? "");
+
+            formatParams.Add((Concentration ? "Concentration, up to " : "") + Duration ?? "");
             formatParams.Add(Description ?? "");
 
             var atHigherLevels = AtHigherLevels;
