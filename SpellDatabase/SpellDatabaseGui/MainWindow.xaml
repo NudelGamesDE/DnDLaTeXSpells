@@ -1,0 +1,69 @@
+﻿<Window x:Class="SpellDatabaseGui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpellDatabaseGui"
+        mc:Ignorable="d"
+        Title="DnD Spells" d:DesignWidth="753.88" d:DesignHeight="529.171">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <ListBox Grid.Column="0" ItemsSource="{Binding Spells}" Margin="10,10,5,10" SelectionChanged="ListBox_SelectionChanged" DisplayMemberPath="Display"/>
+
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="172"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="5"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="37"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label Content="Name:" Margin="5,10,5,0" VerticalAlignment="Top" Height="26"/>
+                <Label Content="Type:" Margin="5,37,5,0" VerticalAlignment="Top" Height="26"/>
+                <Label Content="CastinTime:" Margin="5,64,5,0" VerticalAlignment="Top" Height="26"/>
+                <Label Content="Range:" Margin="5,91,5,0" VerticalAlignment="Top" Height="26"/>
+                <Label Content="Components:" Margin="5,118,5,0" VerticalAlignment="Top" Height="26"/>
+                <Label Content="Duration:" Margin="5,145,5,0" VerticalAlignment="Top" Height="26"/>
+
+                <TextBox Grid.Column="1" Margin="5,10,10,0" TextWrapping="Wrap" Text="{Binding CurrentSpell.Name}" VerticalAlignment="Top" Height="22"/>
+                <Grid Grid.Column="1" Margin="5,37,10,0" VerticalAlignment="Top" Height="22">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <ComboBox Margin="0,0,5,0" SelectedValue="{Binding CurrentSpell.Type}" ItemsSource="{Binding SpellTypes}"/>
+                    <ComboBox Margin="5,0,0,0" SelectedValue="{Binding CurrentSpell.Level}" ItemsSource="{Binding SpellLevels}" Grid.Column="1"/>
+                </Grid>
+                <TextBox Grid.Column="1" Margin="5,64,10,0" TextWrapping="Wrap" Text="{Binding CurrentSpell.CastingTime}" VerticalAlignment="Top" Height="22"/>
+                <TextBox Grid.Column="1" Margin="5,91,10,0" TextWrapping="Wrap" Text="{Binding CurrentSpell.Range}" VerticalAlignment="Top" Height="22"/>
+                <TextBox Grid.Column="1" Margin="5,118,10,0" TextWrapping="Wrap" Text="{Binding CurrentSpell.Components}" VerticalAlignment="Top" Height="22"/>
+                <TextBox Grid.Column="1" Margin="5,145,10,0" TextWrapping="Wrap" Text="{Binding CurrentSpell.Duration}" VerticalAlignment="Top" Height="22"/>
+
+
+            </Grid>
+            <Label Content="Description:" Margin="5,5,10,0" Grid.Row="1" VerticalAlignment="Top"/>
+            <TextBox Margin="2,36,10,2" Grid.Row="1" TextWrapping="Wrap" Text="{Binding CurrentSpell.Description}"/>
+
+            <GridSplitter Grid.Row="2" Height="5" VerticalAlignment="Center" HorizontalAlignment="Stretch" />
+            <Label Content="At Higher Levels:" Margin="5,5,10,0" Grid.Row="3" VerticalAlignment="Top"/>
+            <TextBox Margin="2,36,10,2" Grid.Row="3" TextWrapping="Wrap" Text="{Binding CurrentSpell.AtHigherLevels}"/>
+
+            <Button Grid.Row="4" Content="Save" HorizontalAlignment="Right" Margin="0,5,10,10" Width="100" Click="SaveButton_Click"/>
+            <Button Grid.Row="4" Content="New" HorizontalAlignment="Left" Margin="5,5,0,10" Width="100" Click="AddButton_Click"/>
+            <Button Grid.Row="4" Content="Remove" HorizontalAlignment="Left" Margin="110,5,0,10" Width="100" Click="RemoveButton_Click"/>
+        </Grid>
+
+
+    </Grid>
+</Window>
