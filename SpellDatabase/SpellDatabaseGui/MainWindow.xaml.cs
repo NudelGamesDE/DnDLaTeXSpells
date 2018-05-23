@@ -75,7 +75,9 @@ namespace SpellDatabaseGui
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
         {
-            SpellContainer.Spells.Add(new Spell { Name = "New Spell" });
+            var newSpell = new Spell { Name = "New Spell" };
+            SpellContainer.Spells.Add(newSpell);
+            SpellSelected(newSpell);
         }
 
         private void RemoveButton_Click(object sender, RoutedEventArgs e)

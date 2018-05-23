@@ -12,10 +12,11 @@ namespace SpellDatabase
         private bool RitualValue; public bool Ritual { get => RitualValue; set { RitualValue = value; OnPropertyChanged(); } }
         private string CastingTimeValue; public string CastingTime { get => CastingTimeValue; set { CastingTimeValue = value; OnPropertyChanged(); } }
         private string RangeValue; public string Range { get => RangeValue; set { RangeValue = value; OnPropertyChanged(); } }
-        private bool ComponentVValue; public bool ComponentV { get => ComponentVValue; set { ComponentVValue = value; OnPropertyChanged() ; } }
+        private bool ComponentVValue; public bool ComponentV { get => ComponentVValue; set { ComponentVValue = value; OnPropertyChanged(); } }
         private bool ComponentSValue; public bool ComponentS { get => ComponentSValue; set { ComponentSValue = value; OnPropertyChanged(); } }
         private string ComponentMValue; public string ComponentM { get => ComponentMValue; set { ComponentMValue = value; OnPropertyChanged(); } }
         private string DurationValue; public string Duration { get => DurationValue; set { DurationValue = value; OnPropertyChanged(); } }
+        private bool ConcentrationValue; public bool Concentration { get => ConcentrationValue; set { ConcentrationValue = value; OnPropertyChanged(); } }
         private string DescriptionValue; public string Description { get => DescriptionValue; set { DescriptionValue = value; OnPropertyChanged(); } }
         private string AtHigherLevelsValue; public string AtHigherLevels { get => AtHigherLevelsValue; set { AtHigherLevelsValue = value; OnPropertyChanged(); } }
 

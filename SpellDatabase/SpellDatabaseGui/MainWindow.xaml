@@ -30,7 +30,7 @@
                 </Grid.ColumnDefinitions>
                 <Label Content="Name:" Margin="5,10,5,0" VerticalAlignment="Top" Height="26"/>
                 <Label Content="Type:" Margin="5,37,5,0" VerticalAlignment="Top" Height="26"/>
-                <Label Content="CastinTime:" Margin="5,64,5,0" VerticalAlignment="Top" Height="26"/>
+                <Label Content="Casting Time:" Margin="5,64,5,0" VerticalAlignment="Top" Height="26"/>
                 <Label Content="Range:" Margin="5,91,5,0" VerticalAlignment="Top" Height="26"/>
                 <Label Content="Components:" Margin="5,118,5,0" VerticalAlignment="Top" Height="26"/>
                 <Label Content="Duration:" Margin="5,145,5,0" VerticalAlignment="Top" Height="26"/>
@@ -60,7 +60,14 @@
                     <Label Content="M:" Grid.Column="2" Margin="0,-5,0,0"/>
                     <TextBox Grid.Column="3" Margin="0" TextWrapping="Wrap" Text="{Binding CurrentSpell.ComponentM}"/>
                 </Grid>
-                <TextBox Grid.Column="1" Margin="5,145,10,0" TextWrapping="Wrap" Text="{Binding CurrentSpell.Duration}" VerticalAlignment="Top" Height="22"/>
+                <Grid Grid.Column="1" Margin="5,145,10,0" VerticalAlignment="Top" Height="22">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="110" />
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Margin="0,0,5,0" TextWrapping="Wrap" Text="{Binding CurrentSpell.Duration}"/>
+                    <CheckBox Content="Concentration" IsChecked="{Binding CurrentSpell.Concentration}" Grid.Column="1" Margin="0,2,0,0"/>
+                </Grid>
 
 
             </Grid>
