@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SpellDatabase;
+using SpellDatabaseGui.Annotations;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
@@ -6,25 +8,15 @@ using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using SpellDatabase;
-using SpellDatabaseGui.Annotations;
 
 namespace SpellDatabaseGui
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window, INotifyPropertyChanged
+    public partial class MainWindow : INotifyPropertyChanged
     {
         private readonly IDatabase SpellContainer;
         public ObservableCollection<Spell> Spells { get; }
@@ -34,7 +26,11 @@ namespace SpellDatabaseGui
 
         public MainWindow()
         {
+#if DEBUG
+            SpellContainer = FromFile.Open("../../../../spells.json");
+#else
             SpellContainer = FromFile.Open("spells.json");
+#endif
             Spells = new ObservableCollection<Spell>(SpellContainer.Spells);
             SpellContainer.Spells.CollectionChanged += SpellsOnCollectionChanged;
             SpellsOnCollectionChanged(this, null);
