@@ -54,17 +54,10 @@ namespace SpellDatabase
             if (FilePath == null) throw new Exception();
 
             using (var file = new StreamWriter(FilePath))
-#if DEBUG
                 file.Write(JsonConvert.SerializeObject(this, Formatting.Indented, new JsonSerializerSettings
                 {
                     NullValueHandling = NullValueHandling.Ignore
                 }));
-#else
-                file.Write(JsonConvert.SerializeObject(this, Formatting.None, new JsonSerializerSettings
-                {
-                    NullValueHandling = NullValueHandling.Ignore
-                }));
-#endif
         }
     }
 }
