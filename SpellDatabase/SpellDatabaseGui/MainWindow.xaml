@@ -79,8 +79,10 @@
             <TextBox Margin="2,36,10,2" Grid.Row="3" TextWrapping="Wrap" Text="{Binding CurrentSpell.AtHigherLevels}"/>
 
             <Button Grid.Row="4" Content="Save" HorizontalAlignment="Right" Margin="0,5,10,10" Width="100" Click="SaveButton_Click"/>
+            <Button Grid.Row="4" Content="Edit Format" HorizontalAlignment="Right" Margin="0,5,115,10" Width="100" Click="EditFormatButton_Click" />
             <Button Grid.Row="4" Content="New" HorizontalAlignment="Left" Margin="5,5,0,10" Width="100" Click="AddButton_Click"/>
             <Button Grid.Row="4" Content="Remove" HorizontalAlignment="Left" Margin="110,5,0,10" Width="100" Click="RemoveButton_Click"/>
+            <Button Grid.Row="4" Content="Copy Formatted" HorizontalAlignment="Left" Margin="215,5,0,10" Width="100" Click="CopyFormattedButton_Click"/>
         </Grid>
 
 

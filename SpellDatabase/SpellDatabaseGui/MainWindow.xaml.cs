@@ -84,5 +84,16 @@ namespace SpellDatabaseGui
         {
             SpellContainer.Spells.Remove(CurrentSpell);
         }
+
+        private void EditFormatButton_Click(object sender, RoutedEventArgs e)
+        {
+            var editWindow = new FormatWindow(SpellContainer);
+            editWindow.Show();
+        }
+
+        private void CopyFormattedButton_Click(object sender, RoutedEventArgs e)
+        {
+            Clipboard.SetText(CurrentSpell.GetFormatted(SpellContainer.Format ?? ""));
+        }
     }
 }

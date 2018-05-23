@@ -1,0 +1,12 @@
+﻿<Window x:Class="SpellDatabaseGui.FormatWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpellDatabaseGui"
+        mc:Ignorable="d"
+        Title="Format" d:DesignWidth="521.791" d:DesignHeight="362.561">
+    <Grid>
+        <TextBox Text="{Binding SpellDatabase.Format}" x:Name="FormatTextBox" Margin="10" TextWrapping="Wrap" AcceptsReturn="True" AcceptsTab="True"/>
+    </Grid>
+</Window>

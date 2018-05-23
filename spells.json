@@ -1,4 +1,5 @@
 {
+  "Format": "|\\begin{spell}\r\n\t{|0|}\r\n\t{|1|}\r\n\t{|2|}\r\n\t{|3|}\r\n\t{|4|}\r\n\t{|5|}\r\n|6|\r\n\r\n\\textbf{|8|} |7|\r\n\\end{spell}",
   "Spells": [
     {
       "Name": "Light",
@@ -54,6 +55,7 @@
       "ComponentV": true,
       "ComponentS": false,
       "ComponentM": "a weapon",
+      "Duration": "Instantaneous",
       "Concentration": false,
       "Description": "As part of the action used to cast this spell, you must make a melee attack with a weapon against one creature within the spell’s range, otherwise the spell fails. On a hit, the target suffers the attack’s normal effects, and green fire leaps from the target to a different creature of your choice that you can see within \\ft{5} of it. The second creature takes fire damage equal to your spellcasting modifier.",
       "AtHigherLevels": "This spell’s damage increases when you reach higher levels. At 5th level, the melee attack deals an extra 1d8 fire damage to the target, and the fire damage to the second creature increases to 1d8 + your spellcasting ability modifier. Both damage rolls increase by 1d8 at 11th level and 17th level.",
@@ -69,6 +71,7 @@
       "ComponentV": true,
       "ComponentS": true,
       "ComponentM": "a pinch of find sand, rose petals, or a cricket",
+      "Duration": "1 minute",
       "Concentration": false,
       "Description": "This spell sends creatures into a magical slumber. Roll 5d8, the total is how many hit points of creatures this spell can affect. Creatures within \\ft{20} of a point you choose within range are affected in ascending order of their current hit points (ignoring unconscious creatures). Starting with the creature that has the lowest current hit points, each creature affected by this spell falls unconscious until the spell ends, the sleeper takes damage, or someone uses an action to shake or slap the sleeper awake. Subtract each creature’s hit points from the total before moving on to the creature with the next lowest hit points. A creature’s hit points must be equal to or less than the remaining total for that creature to be affected. Undead and creatures immune to being charmed aren’t affected by this spell.",
       "AtHigherLevels": "When you cast this spell using a spell slot of 2nd level or higher, roll an additional 2d8 for each slot level above 1st.",
