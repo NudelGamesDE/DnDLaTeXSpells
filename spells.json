@@ -315,6 +315,21 @@
       "Description": "You create three rays of fire and hurl them at targets within range. You can hurl them at one target or several.\r\n\r\nMake a ranged spell attack for each ray. On a hit, the target takes 2d6 fire damage.",
       "AtHigherLevels": "When you cast this spell using a spell slot of 3rd level or higher, you create one additional ray for each slot level above 2nd.",
       "Display": "Scorching Ray (Evocation Level2)"
+    },
+    {
+      "Name": "Thunderclap",
+      "Type": 4,
+      "Level": 0,
+      "Ritual": false,
+      "CastingTime": "1 action",
+      "Range": "Self (\\ft{5} radius)",
+      "ComponentV": false,
+      "ComponentS": true,
+      "Duration": "Instantaneous",
+      "Concentration": false,
+      "Description": "You create a burst of thunderous sound, which can be heard \\ft{100} away. Each creature other than you within \\ft{5} of you must make a Constitution saving throw. On a failed save, the creature takes 1d6 thunder damage.",
+      "AtHigherLevels": "The spell’s damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
+      "Display": "Thunderclap (Evocation Cantrip)"
     }
   ]
 }
