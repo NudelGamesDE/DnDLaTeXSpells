@@ -330,6 +330,36 @@
       "Description": "You create a burst of thunderous sound, which can be heard \\ft{100} away. Each creature other than you within \\ft{5} of you must make a Constitution saving throw. On a failed save, the creature takes 1d6 thunder damage.",
       "AtHigherLevels": "The spell’s damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).",
       "Display": "Thunderclap (Evocation Cantrip)"
+    },
+    {
+      "Name": "Sanctuary",
+      "Type": 0,
+      "Level": 1,
+      "Ritual": false,
+      "CastingTime": "1 bonus action",
+      "Range": "30",
+      "ComponentV": true,
+      "ComponentS": true,
+      "ComponentM": "a small silver mirror",
+      "Duration": "1 minute",
+      "Concentration": false,
+      "Description": "You ward a creature within range against attack. Until the spell ends, any creature who targets the warded creature with an attack or a harmful spell must first make a Wisdom saving throw. On a failed save, the creature must choose a new target or lose the attack or spell. This spell doesn’t protect the warded creature from area effects, such as the explosion of a fireball.\r\n\r\nIf the warded creature makes an attack or casts a spell that affects an enemy creature, this spell ends.",
+      "Display": "Sanctuary (Abjuration Level1)"
+    },
+    {
+      "Name": "Inflict Wounds",
+      "Type": 6,
+      "Level": 1,
+      "Ritual": false,
+      "CastingTime": "1 action",
+      "Range": "Touch",
+      "ComponentV": true,
+      "ComponentS": true,
+      "Duration": "Instantaneous",
+      "Concentration": false,
+      "Description": "Make a melee spell attack against a creature you can reach. On a hit, the target takes 3d10 necrotic damage.",
+      "AtHigherLevels": "When you cast this spell using a spell slot of 2nd level or higher, the damage increases by 1d10 for each slot level above 1st.",
+      "Display": "Inflict Wounds (Necromancy Level1)"
     }
   ]
 }
